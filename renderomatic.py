@@ -4,14 +4,15 @@ import os
 
 def parse_arguments():
     '''
-        Input - None
-        Output - Command line argument list from ArgumentParser object
+        PURPOSE - Separate all of the argument requirements to keep 'main' clean
+        INPUT - None
+        OUTPUT - Command line argument list from ArgumentParser object
     '''
     # Parser object
     parser = ArgumentParser()
     
     # Command line arguments
-    parser.add_argument("-f", "--file", type = str, required = True, help = "Input art file")
+    parser.add_argument("-f", "--file", type = str, required = True, help = "List of input art files")
     parser.add_argument("-s", "--sizes", type = str, required = True, help = "List of sizes to render in")
     parser.add_argument("-m", "--molds", type = str, required = True, help = "List of mouldings to render in")
     
@@ -37,11 +38,11 @@ if __name__ == "__main__":
         listOfNames = args.file.split(",")
     
     # Sizes
-    if args.sizes:
+    if args.sizes and args.molds.__len__() > 0:
         listOfSizes = args.sizes.split(",")
     
     # Moudlings
-    if args.molds:
+    if args.molds and args.molds.__len__() > 0:
         listOfMolds = args.molds.split(",")
 
     ### INPUT VALIDATION ###
