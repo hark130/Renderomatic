@@ -50,7 +50,7 @@ if __name__ == "__main__":
     if success:
         for filename in listOfNames:
             if filename.__len__() == 0:
-                print("Renderomatic detected an empty filename.\nDid include an extra comma in the -f argument?")
+                print("Renderomatic detected an empty filename.\nDid you include an extra comma in the -f argument?")
                 success = False
                 break
             elif not os.path.isfile(filename):
@@ -62,7 +62,7 @@ if __name__ == "__main__":
     if success:
         for size in listOfSizes:
             if size.__len__() == 0:
-                print("Renderomatic detected an empty size.\nDid include an extra comma in the -s argument?")
+                print("Renderomatic detected an empty size.\nDid you include an extra comma in the -s argument?")
                 success = False
                 break
 
@@ -70,7 +70,7 @@ if __name__ == "__main__":
     if success:
         for mold in listOfMolds:
             if mold.__len__() == 0:
-                print("Renderomatic detected an empty moulding.\nDid include an extra comma in the -m argument?")
+                print("Renderomatic detected an empty moulding.\nDid you include an extra comma in the -m argument?")
                 success = False
                 break
         
