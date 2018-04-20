@@ -2,7 +2,7 @@
 
 ## NAME
 
-	print_PID_libraries.exe - list files loaded into memory by a PID
+	renderomatic.py - Process template files into properly formatted and organized filenames to be parsed by Adobe Photoshop scripts
 
 ## SYNOPSIS
 
